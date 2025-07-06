@@ -1,0 +1,26 @@
+// .babelrc
+
+{
+  "presets": [
+    "@babel/preset-react",
+    [
+      "@babel/preset-env",
+      {
+        "targets": {
+          "browsers": "last 2 versions",
+          "node": "current"
+        },
+        "modules": false,
+        "loose": false,
+        "useBuiltIns": "entry",
+        "corejs": "3.30.2"
+      }
+    ]
+  ],
+  "plugins": ["@babel/plugin-transform-class-properties", "react-refresh/babel"],
+  "env": {
+    "test": {
+      "plugins": ["transform-es2015-modules-commonjs"]
+    }
+  }
+}
